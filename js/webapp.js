@@ -4,11 +4,15 @@ const estoque = new Estoque;
 
 const menuProdutos = document.getElementById("produtos");
 const formAdicionar = document.querySelector("[data-form]");
-const formLimpar = document.getElementById("adicionarProduto-limpar");
+const formLimpar = document.getElementById("limpar");
 const produtos = await estoque.conectaApi("produtos");
 
 // carrega os produtos
-estoque.carregaProdutos(menuProdutos, produtos);
+try {
+    estoque.carregaProdutos(menuProdutos, produtos);
+} catch (error) {
+    menuProdutos.insertAdjacentHTML("beforeend", "<h2 class='erro-msg'>Nenhum produto disponivel</h2>");
+}
 
 // listener adicionar produto
 formAdicionar.addEventListener("submit", e => {

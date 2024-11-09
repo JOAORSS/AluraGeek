@@ -9,16 +9,37 @@ class estoque {
     }
 
     async conectaApi(endPoint){
-        const response = await fetch(this.url.concat(endPoint));
-        const resConvert = await response.json();
-        return resConvert;
+
+        document.getElementById("produtos").insertAdjacentHTML("beforeend", "<div class='flipping'></div>");
+
+        try {
+            const response = await fetch(this.url.concat(endPoint));
+            if (!response.ok){
+                throw new Error('Erro ao carregar os produtos');
+            } 
+            const resConvert = await response.json();
+            return resConvert;
+            
+        } catch (error) {
+            document.querySelector(".flipping").remove();
+            document.querySelector(".adicionar-produto__buttons").classList.add("buttons--disabled");
+            document.getElementById("submit").setAttribute("disabled", "true");
+            document.getElementById("limpar").setAttribute("disabled", "true");
+            document.getElementById("produtos").insertAdjacentHTML("beforeend", "<h2 class='erro-msg'>Tente novamente mais tarde</h2>");
+        }
     }
 
     async carregaProdutos(menuProdutos, produtos){
-        produtos.forEach(element => {
-            const prod = new this.produto(element["nome"], element["preco"], element["imagem"], element["id"]);
-            menuProdutos.insertAdjacentHTML("beforeend", `${prod}`);
-        });
+        document.querySelector(".flipping").remove();
+        if (produtos.length >= 1){
+            produtos.forEach(element => {
+                const prod = new this.produto(element["nome"], element["preco"], element["imagem"], element["id"]);
+                menuProdutos.insertAdjacentHTML("beforeend", `${prod}`);
+            });
+
+        } else {
+            menuProdutos.insertAdjacentHTML("beforeend", "<h2 class='erro-msg'>Nenhum produto disponivel</h2>");
+        }
     }
 
     async criaProduto(produto){
