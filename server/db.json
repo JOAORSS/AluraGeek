@@ -1,0 +1,52 @@
+{
+  "produtos": [
+    {
+      "id": "2ede",
+      "nome": "Caneca Celestes",
+      "preco": "24.00",
+      "imagem": "https://images.tcdn.com.br/img/img_prod/422825/caneca_jogo_celeste_com_alca_e_interior_azul_8333_1_bf96bf488a9bd24aa07c8274530cd5d9.jpg"
+    },
+    {
+      "id": "e658",
+      "nome": "Caneca Dragon Ball",
+      "preco": "21.50",
+      "imagem": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPfq9qJJtqD_CyveQjgVeLADT8tQOYicyOjA&s"
+    },
+    {
+      "id": "259a",
+      "nome": "Caneca My Little Pony",
+      "preco": "25.00",
+      "imagem": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeSJ7ICjPb-R2ewFXi-XZ8yLfHbQD1_iOtTg&s"
+    },
+    {
+      "id": "b1fb",
+      "nome": "Chaveiro Undertale",
+      "preco": "11.00",
+      "imagem": "https://acdn.mitiendanube.com/stores/001/203/371/products/chaveiro-undertale-produtos-gamers1-f01e66aa6f4c664cd616171186911304-640-0.jpg"
+    },
+    {
+      "id": "1a1d",
+      "nome": "Chaveiro Esqueleto Camarada",
+      "preco": "7.60",
+      "imagem": "https://ae04.alicdn.com/kf/S8dbd92fee3804b90bc8ac59b699cad9at.jpg_480x480.jpg"
+    },
+    {
+      "id": "f826",
+      "nome": "Chaveiro Musica Personalizado",
+      "preco": "13.50",
+      "imagem": "https://down-br.img.susercontent.com/file/6651289146a90a6d78e6c947afc1820a"
+    },
+    {
+      "id": "e1eb",
+      "nome": "Chaveiro Hylian",
+      "preco": "8.30",
+      "imagem": "https://www.geekmagazine.com.br/wp-content/uploads/2021/06/chaveiro-legend-of-zelda-hylian-escudo-azul.webp"
+    },
+    {
+      "id": "5657",
+      "nome": "Chaveiro Caçador de Monstros",
+      "preco": "8.30",
+      "imagem": "https://down-br.img.susercontent.com/file/sg-11134201-7rblt-lmjsgd9fmgqhe2"
+    }
+  ]
+}

@@ -1,6 +1,7 @@
 {
   "name": "alurageek",
   "version": "1.0.0",
+  "type": "module",
   "description": "aluraGeek",
   "main": "index.js",
   "scripts": {
@@ -9,6 +10,6 @@
   "author": "JoaoRS",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.21.1"
+    "json-server": "^1.0.0-beta.3"
   }
 }

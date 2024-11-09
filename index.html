@@ -5,56 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="shortcut icon" href="images/icon.png" type="image/x-icon">
     <title>Alura Geek</title>
 </head>
 <body>
     <header class="header">
-        <div class="header__logo">
-            <img src="" alt="aluraGeek logo" class="aluraGeek-logo__img">
-            <h2 class="aluraGeek-logo__h2"></h2>
-        </div>
+            <img src="images/logo.svg" alt="aluraGeek logo" class="aluraGeek-logo__img">
+            <h2 class="aluraGeek-logo__h2">AluraGeek</h2>
     </header>
     <main class="main">
         <section class="produtos">
-            <h2 class="produtos__h2"></h2>
-            <div class="produtos__menu">
-                <div class="produto">
-                    <div>
-                        <img src="" alt="imagem do produto" class="produto__img">
-                        <div class="produto__info">
-                            <p class="produto__nome"></p>
-                        </div>
-                    </div>
-                    <div>
-                        <p class="produto__preco"></p>
-                        <button id="excluirProduto"><img src="" alt="lixeirinha" class="produto__excluir"></button>
-                    </div>
-                </div>
+            <h2 class="produtos__h2">Meus produtos</h2>
+            <div class="produtos__menu" id="produtos">
             </div>
         </section>
         <section class="adicionar-produto">
-            <form action="" method="post">
-                <label class="adicionar-produto__label">Nome</label>
-                <input type="text" class="adicionar-produto__input" [data-nome]>
-                <label class="adicionar-produto__label">Valor</label>
-                <input type="number" class="adicionar-produto__input" [data-valor]>
-                <label class="adicionar-produto__label">Imagem</label>
-                <input type="file" class="adicionar-produto__input" [data-imagem]>
-            </form>
-            <div>
-                <button id="adicionarProduto-guardar" class="adicionar-produto__guardar">Guardar</button>
-                <button id="adicionarProduto-limpar" class="adicinar-produto__guardar">Limpar</button>
+            <h2 class="adicionar-produto__h2">Adiconar produto:</h2>
+            <form class="adicionar-produto__form" method="post" data-form>
+                <input type="text" autocomplete="off" name="nome" required placeholder="nome..." class="adicionar-produto__input" data-nome>
+                <input type="number" autocomplete="off" name="preco" required placeholder="preço..." step="0.01" class="adicionar-produto__input" data-preco>
+                <input type="text" autocomplete="off" name="img" required placeholder="imagem..." class="adicionar-produto__input" data-imagem>
+            <div class="adicionar-produto__buttons">
+                <input type="submit" class="adicionar-produto__guardar" value="Guardar">
+                <input type="button" id="adicionarProduto-limpar" class="adicinar-produto__limpar" value="Limpar">
             </div>
+            </form>
         </section>
     </main>
     <footer class="footer">
         <div class="footer__logo">
-            <img src="" alt="aluraGeek logo" class="aluraGeek-logo__img">
-            <h2 class="aluraGeek-logo__h2"></h2>
+            <img src="images/logo.svg" alt="aluraGeek logo" class="aluraGeek-logo__img">
+            <h2 class="aluraGeek-logo__h2">AluraGeek</h2>
         </div>
-        <p class="footer__creditos"></p>
-        <p class="footer__alura"></p>
+        <p class="footer__creditos">DESENVOLVIDO POR JOÃO VITOR RAENKE DOS SANTOS</p>
+        <p class="footer__alura">ALURA LATAM - 2024</p>
     </footer>
+
+    <script type="module" src="js/webapp.js"></script>
     
 </body>
 </html>

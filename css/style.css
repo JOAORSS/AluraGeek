@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+
+:root{
+    --fonteEscrita: "IBM Plex Mono", monospace;
+    --fonteTitulo: "Press Start 2P", system-ui;
+
+    --backgroundColor: #8c0375;
+    --inputColor:  #03318c;
+    --shartColor: #5d04d9;
+}
+
+html{
+    font-family: var(--fonteEscrita);
+    width: 100vw;
+    height: 100vh;
+}
+
+body{
+    max-width: 100vw;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.header, .footer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--shartColor);
+}
+
+.aluraGeek-logo__img{
+    width: 10vw;
+}
+
+.aluraGeek-logo__h2{
+    font-family: var(--fonteTitulo);
+    color: white;
+    font-size: 1.25rem;
+}
+
+.main{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 8vh;
+    margin-bottom: 10vh;
+    gap: 10%;
+}
+
+.produtos{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-items: center;
+    max-width: 50%;
+}
+
+.produtos__h2, .adicionar-produto__h2{
+    text-align: center;
+    font-family: var(--fonteTitulo);
+}
+
+.produtos__menu{
+    row-gap: 50px;
+    padding: 1.5%;
+    overflow-y: scroll;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1.6rem;
+    justify-content: flex-start;
+    align-content: flex-start; 
+    box-shadow: -10px 16px 10px 2px rgba(0, 0, 0, 0.5);
+    --sb-track-color: #ffffff;
+    --sb-thumb-color: #9e9e9e;
+    --sb-size: 9px;
+}
+  
+.produtos__menu::-webkit-scrollbar {
+    width: var(--sb-size);
+}
+  
+  .produtos__menu::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+    border-radius: 6px;
+}
+  
+  .produtos__menu::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+    border-radius: 6px;
+}
+  
+  @supports not selector(::-webkit-scrollbar) {
+    .produtos__menu {
+        scrollbar-color: var(--sb-thumb-color)
+                       var(--sb-track-color);
+    }
+}
+
+.produto{
+    display: flex;
+    max-width: calc(100%/4);
+    flex-direction: column;
+    background-color: var(--shartColor);
+    border-radius: 8px;
+    border: 3px black solid;
+    flex-grow: 0;
+    justify-content: space-between;
+    max-height: auto;
+    flex: 1 1 calc(33.33% - 0.625rem);
+    min-width: 220px;
+}
+
+.produto__sup{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 8px;
+}
+
+.produto__img{
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 8px;
+    border: 3px black solid;
+    object-fit: cover;
+}
+
+.produto__nome{
+    align-self: flex-start;
+    margin-bottom: 0px;
+    color: aliceblue;
+    margin-top: 5px;
+}
+
+.produto__down{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0% 8px;
+    margin-bottom: 8px;
+}
+
+.produto__preco{
+    font-weight: 600;
+    color: aliceblue;
+    margin-bottom: 0px;
+    margin-top: 5px;
+
+}
+
+.produto__excluir{
+    padding: 4px;
+}
+
+.adicionar-produto{
+    display: flex;
+    flex-direction: column;
+    width: 25%;   
+}
+
+.adicionar-produto__form{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.adicionar-produto__input{
+    border-radius: 50px;
+    padding: 4%;
+    border: 3px solid var(--inputColor);
+    color: var(--inputColor);
+}
+.adicionar-produto__input::placeholder{
+    color: var(--inputColor);
+}
+
+.adicionar-produto__buttons{
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+    justify-content: space-evenly;
+}
+
+.adicinar-produto__limpar, .adicionar-produto__guardar{
+    border: 2px var(--inputColor) solid;
+    border-radius: 8px;
+    padding: 3% 12%;
+    background-color: #03318c;
+    color: aliceblue;
+}
+
+.adicinar-produto__limpar{
+    background-color: white;
+    color: var(--inputColor);
+}
+
+.footer{
+    margin-top: 5vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column ;
+}
+
+.footer__logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.footer__creditos{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: aliceblue;
+    font-size: 0.8rem;
+}
+
+.footer__alura{
+    margin-bottom: 10px;
+    color: aliceblue;
+    opacity: 0.5;
+}
+
+
+@media screen and (max-width: 760px) {
+
+    html{
+        overflow-x: hidden;
+    }
+
+    .aluraGeek-logo__img{
+        width: 40%;
+    }
+
+    .main{
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 8vh;
+    }
+
+    .adicionar-produto{
+        align-items: center;
+        width: 80%;
+    }
+
+    .adicionar-produto__form{
+        width: 100%;
+    }
+
+    .adicionar-produto__buttons{
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .produtos{
+        max-width: 90%; 
+    }
+
+    .produtos__menu{
+        width: 100%;
+        overflow-x: scroll;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .produto{
+        max-width: calc(100%/2.5);
+    }
+
+    .produto__img{
+        max-width: 100%;
+        min-width: 50%;
+        width: auto;
+    }
+    
+}
